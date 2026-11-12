@@ -70,7 +70,7 @@ def test_data_survives_restart(tmp_path):
 
 def test_unsupported_mode(monkeypatch, tmp_path):
     monkeypatch.setenv("AABY_AGENT_MODE", "live")
-    with pytest.raises(ValueError, match="Only demo"):
+    with pytest.raises(ValueError, match="Unsupported"):
         create_app(str(tmp_path / "test.sqlite3"))
 
 

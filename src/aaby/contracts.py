@@ -44,5 +44,16 @@ class Hint(Contract):
     status: Literal["needs_context", "waiting_user", "waiting_service", "completed"]
     highlight_element_id: str | None = None
     source_ids: list[str] = Field(default_factory=list)
-    mode: Literal["demo"] = "demo"
+    mode: Literal["demo", "openrouter"] = "demo"
 
+
+class RunRequest(Turn):
+    request_id: str = Field(min_length=1, max_length=100)
+
+
+class ModelHint(Contract):
+    # No completed state: only the service may establish completion in a future integration.
+    text: str = Field(min_length=1, max_length=4000)
+    status: Literal["needs_context", "waiting_user", "waiting_service"]
+    highlight_element_id: str | None
+    source_ids: list[str] = Field(max_length=10)

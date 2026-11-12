@@ -23,4 +23,3 @@ def read_instruction(instruction_id: str) -> dict:
     if instruction_id != INSTRUCTION["id"]:
         raise ValueError("Unknown instruction")
     return dict(INSTRUCTION)
-

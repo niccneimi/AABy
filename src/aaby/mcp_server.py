@@ -10,4 +10,3 @@ mcp.tool()(read_instruction)
 
 def main():  # pragma: no cover
     mcp.run(transport="stdio")
-

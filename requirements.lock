@@ -23,6 +23,7 @@ jsonschema==4.26.0
 MarkupSafe==3.0.4
 mcp==1.30.0
 packaging==26.3
+pillow==13.0.0
 pluggy==1.7.0
 pycparser==3.12
 pydantic-settings==2.16.2
