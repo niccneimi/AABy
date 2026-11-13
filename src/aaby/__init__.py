@@ -1,0 +1,1 @@
+"""AI-buddy application package."""
